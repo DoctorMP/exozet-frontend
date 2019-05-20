@@ -1,0 +1,84 @@
+.article-meta {
+    margin: 0;
+    color: $text-light;
+}
+
+.article-title {
+    margin: 0;
+    padding: 5px 0;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &:after {
+        margin-left: 12px;
+        content: '/';
+    }
+}
+
+.illustration {
+    img {
+        display: block;
+        padding: 3px;
+        background: $bg-secondary;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+    }
+    .illustration-caption {
+        color: $text-light;
+        font-size: 11px;
+        line-height: 18px;
+    }
+
+    &.align-left {
+        float: left;
+        margin: 15px 20px 15px 0;
+    }
+
+    &.align-right {
+        float: right;
+        margin: 15px 0 15px 20px;
+    }
+}
+
+blockquote {
+    position: relative;
+    margin: 1em 0;
+    padding: 1px 30px;
+    font: italic 700 18px/24px 'Merriweather', serif;
+    text-align: center;
+
+    &:before, &:after {
+        display: block;
+        width: 100%;
+        max-width: 303px;
+        height: 1px;
+        background: $border;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        content: '';
+    }
+    &:before {
+        top: 0;
+    }
+    &:after {
+        bottom: 0;
+    }
+
+    p {
+        margin: 10px 0;
+    }
+}
+
+@include medium {
+    blockquote {
+        padding: 1px 60px;
+    }
+}
+
+@include large {
+    .article-title {
+        padding: 10px 0;
+        font-size: 32px;
+    }
+}

@@ -1,0 +1,22 @@
+button, .button {
+    display: inline-block;
+    padding: 0 16px;
+    line-height: 23px;
+    color: #fff;
+    text-shadow: 0 -1px 0 $text-base;
+    border: 1px solid #536e0b;
+    border-radius: 5px;
+    background: #769329;
+    background: linear-gradient(to bottom, #b6c58e 0%, #739024 50%, #739024 100%) 0 0;
+    background-size: 100% 200%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: all 0.3s;   
+    text-align: center;
+
+    &:hover, &:focus {
+        box-shadow: 0 2px 7px rgba(0,0,0,0.3);
+        background-position: 0 100%;
+        color: #fff;
+    }
+}

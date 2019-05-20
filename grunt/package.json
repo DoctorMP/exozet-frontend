@@ -1,0 +1,15 @@
+{
+  "name": "Giganto",
+  "version": "1.0.0",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-compass": 	"~0.2.0",
+    "grunt-contrib-sass": 		"*",
+    "grunt-contrib-cssmin":     "*",
+    "grunt-contrib-sass":       "*",
+    "grunt-contrib-uglify":     "*",
+    "grunt-contrib-watch":      "*",
+    "grunt-cssc":               "*",
+    "matchdep": 				"~0.1.2"
+  }
+}

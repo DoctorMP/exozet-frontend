@@ -1,0 +1,49 @@
+@mixin columns($count, $gap) {
+	-webkit-column-count: $count;
+    -moz-column-count: $count;
+    column-count: $count;
+    -webkit-column-gap: $gap;
+    -moz-column-gap: $gap;
+    column-gap: $gap;
+    page-break-inside: avoid;
+}
+
+@mixin column-rule($style) {
+    -webkit-column-rule: $style;
+    -moz-column-rule: $style;
+    column-rule: $style;
+} 
+
+
+@mixin animation($config) {
+    -webkit-animation: $config;
+    animation: $config;
+}
+
+@mixin transformation($settings) {
+    -webkit-transform-style: preserve-3d;   
+    -webkit-transform: $settings;
+    transform: $settings;
+}
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+}
+
+@mixin medium() {
+  @media screen and (min-width: 600px) {
+      @content;
+  }
+}
+
+@mixin large() {
+  @media screen and (min-width: 1020px) {
+      @content;
+  }
+}

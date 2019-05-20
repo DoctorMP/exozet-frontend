@@ -1,0 +1,25 @@
+.teaser-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.teaser-content {
+    padding: 10px;
+    border: 1px solid $border;
+    background: $bg-secondary;
+
+    p {
+        margin: 0 0 10px;
+        font-size: 13px;
+
+        &.teaser-cta {
+            margin: 0;
+            font-size: 14px;
+        }
+    }
+}
+
+.teaser-cta .button {
+    display: block;
+}

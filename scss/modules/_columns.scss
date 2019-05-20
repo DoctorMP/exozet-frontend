@@ -1,0 +1,37 @@
+.cols {
+    ul, ol {
+        padding-left: 1em;
+    }
+}
+
+.col {
+    margin: 0 0 20px;
+}
+
+@include medium {
+    .cols {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: stretch;
+        margin: 0 -10px;
+    }
+
+    .col {
+        box-sizing: border-box;
+        padding: 0 10px;
+
+        &.col-half {
+            width: 50%;
+        }
+    }
+}
+
+@include large {
+    .cols {
+        margin: 0 -15px;
+    }
+
+    .col {
+        padding: 0 15px;
+    }
+}

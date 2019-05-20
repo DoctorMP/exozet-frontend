@@ -1,0 +1,52 @@
+.data-list {
+    list-style: none;
+}
+
+.link-list {
+    margin-left: 0;
+    padding-left: 0;
+    list-style: none;
+
+    .link-icon {
+        width: 7px;
+        height: 9px;
+        margin-right: 5px;
+        transition: all 0.3s;
+        display: inline-block;
+
+        path {
+            fill: $main;
+            transition: all 0.3s;
+        }
+    }
+
+    a:hover {
+        .link-icon {
+            animation: arrow-right infinite 0.5s;
+
+            path {
+                fill: $text-base;
+            }
+        }
+    }
+}
+
+.contact {
+    &:before {
+        display: inline-block;
+        width: 13px;
+        height: 13px;
+        margin: 0 5px 0 0;
+        background-repeat: no-repeat;
+        background-position: 50% 100%;
+        content: '';
+    }
+
+    &.contact-phone:before {
+        background-image: url('../img/icon-phone.png');
+    }
+
+    &.contact-email:before {
+        background-image: url('../img/icon-email.png');
+    }
+}

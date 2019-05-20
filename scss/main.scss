@@ -1,0 +1,82 @@
+@charset "UTF-8"; // set charset
+
+// colors
+
+$main: #739024;
+$border: #c3c0c5;
+$text-base: #333;
+$text-light: #999;
+$text-link: #739024;
+$bg-primary: #fff;
+$bg-secondary: #f7f7f7;
+$warning: #e30042;
+
+// assets
+
+@import "assets/mixins";
+@import "assets/animations";
+
+// BASE
+
+html {
+	min-height: 100%;
+	overflow-x: hidden;
+	overflow-y: scroll; 
+	background: $bg-secondary url(../img/bg.png);
+}
+body {
+	box-sizing: border-box;
+	position: relative; 
+	margin: 0 auto; 
+	padding: 0; 
+	background: $bg-primary; 
+	color: $text-base; 
+	font: 400 14px/20px "Titillium Web", sans-serif; 
+	-webkit-text-size-adjust: 100%; 
+	-webkit-font-smoothing: antialiased;
+}
+
+a {
+	color: $main; 
+	text-decoration: none; 
+	transition: all 0.3s;
+	
+	&:hover {
+		color: $text-base;
+	}
+	&:before, &:after {
+		transition: all 0.3s;
+	}
+}
+ul, ol, table, p {
+	margin: 1.5em 0;
+}
+
+.cf:after {display: block; clear: both; overflow: hidden; height: 0; content: " ";}
+
+*::selection {background: $main; color: #fff;}
+*::-moz-selection {background: $main; color: #fff;}
+*::selection a {color: #fff;}
+*::-moz-selection a {color: #fff;}
+
+@include large {
+	body {
+		max-width: 1000px;
+		margin: 0 auto;
+		box-shadow: 0 0 10px rgba(0,0,0,0.15);
+	}
+}
+
+// Modules
+
+@import 'modules/header';
+@import 'modules/footer';
+@import 'modules/content';
+@import 'modules/widgets';
+@import 'modules/article';
+@import 'modules/page-section';
+@import 'modules/columns';
+@import 'modules/content-elements';
+@import 'modules/buttons';
+@import 'modules/form';
+@import 'modules/teaser';
